@@ -1,0 +1,12 @@
+import numpy as np
+import pandas as pd
+import pylab as plt
+ 
+invlogit = lambda x, theta: 1. / (1. + np.exp(-x.dot(theta)))
+ 
+theta = [2, -0.5]
+x = np.c_[np.ones(100), np.linspace(-10,20,100)]
+ 
+y = invlogit(x, theta)
+ 
+plt.plot(x.dot(theta), y)
