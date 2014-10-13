@@ -10,3 +10,4 @@ x = np.c_[np.ones(100), np.linspace(-10,20,100)]
 y = invlogit(x, theta)
  
 plt.plot(x.dot(theta), y)
+
